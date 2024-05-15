@@ -50,7 +50,7 @@ namespace GeometricShapesTest
         [Fact]
         public void TriangleSquare()
         {
-            Triangle triangle = new Triangle(3, 4, 5);
+            Shape triangle = new Triangle(3, 4, 5);
             double answ = 6;
             double squareTriangle = triangle.Area;
             Assert.Equal(squareTriangle, answ);
