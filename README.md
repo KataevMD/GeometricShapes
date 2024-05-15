@@ -14,11 +14,14 @@
 
 Ответ:
 
-
 USE [master]
+
 GO
+
 CREATE DATABASE [Shops]
+
 GO
+
 USE [Shops]
 GO
 CREATE TABLE [Product](
