@@ -24,12 +24,12 @@ CREATE TABLE [Product](
 [ProductID] int PRIMARY KEY IDENTITY(1,1),
 [Title] nvarchar(50) NOT NULL
 );
-
+GO
 CREATE TABLE [Category](
 [CategoryID] int PRIMARY KEY IDENTITY(1,1),
 [Title] nvarchar(50) NOT NULL
 );
-
+GO
 CREATE TABLE [ProductCategory](
 [CategoryID] int,
 [ProductID] int,
@@ -74,11 +74,13 @@ INSERT INTO ProductCategory ([CategoryID], ProductID) VALUES
 (5, 4)
 ;
 GO
+
 --Запрос выводящий все пары названий продуктов и категорий, при это если у продукта нет категории он также выводится
 --Делается это при помощи LEFT JOIN: В этом случае выбираются все записи первой (левой таблицы), в нашем случае это таблица Продуктов,
 --затем с помощью LEFT JOIN добавляются данные из таблицы ProductCategory, это нужно чтобы соединить строки так, чтобы каждый продукт 
 --соответствовал своему идентификатору в таблице ProductCategory, даже если у него нет категории
 --после LEFT JOIN  для таблицы Category позволяет сопоставить категории с их идентификаторами.
+
 SELECT Product.Title, Category.Title FROM Product 
 LEFT JOIN ProductCategory ON Product.ProductID = ProductCategory.ProductID 
 LEFT JOIN Category on ProductCategory.CategoryID = Category.CategoryID;
