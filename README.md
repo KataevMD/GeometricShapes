@@ -14,14 +14,7 @@
 
 Ответ:
 ```html
-<h2>Example of code</h2>
-
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            USE [master]
+USE [master]
 GO
 CREATE DATABASE [Shops]
 GO
@@ -90,9 +83,4 @@ SELECT Product.Title, Category.Title FROM Product
 LEFT JOIN ProductCategory ON Product.ProductID = ProductCategory.ProductID 
 LEFT JOIN Category on ProductCategory.CategoryID = Category.CategoryID;
 
-
-            </div>
-        </div>
-    </div>
-</pre>
 ```
